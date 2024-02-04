@@ -95,3 +95,10 @@ SyslogIdentifier：指定服務的識別符號，用於標識系統日誌中的�
 
 ## 利用外部API查看自身IP
 `curl ifconfig.me`
+
+## JSON格式處理器
+`jq`
+
+e.g. `docker container inspect --format='{{json .State}}' 49a13d02c077 | jq`
+
+https://www.onejar99.com/jq_commands/
