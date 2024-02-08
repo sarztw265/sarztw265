@@ -3,7 +3,7 @@
 ## 啟動容器
 `docker container run -itd --name <name> <image> <command>`
 
--i: 可進入互動式操作
+-i: 可進入互動式操作   
 -t: 終端
 -d: 背景執行，預設不會立刻進入容器
 
