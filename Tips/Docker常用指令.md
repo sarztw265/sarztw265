@@ -8,8 +8,8 @@
 -d: 背景執行，預設不會立刻進入容器
 
 e.g.
-`docker container run -itd alpine ash`
-`docker container run -itd --name nginx nginx:latest /bin/bash`
+`docker container run -it alpine ash`
+`docker container run -d --name nginx nginx:latest /bin/bash`
 
 容器建立過程中有錯誤也有可能會建立成功但不會執行，需檢查是否出現在未執行的容器列表中
 ![WindowsTerminal_KfBWb5FYki.png](../_resources/WindowsTerminal_KfBWb5FYki.png)
