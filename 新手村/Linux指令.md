@@ -47,6 +47,7 @@ lsns
 dig
 ping
 telnet
+netstat
 nc
 iftop
 curl
