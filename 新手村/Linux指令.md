@@ -56,3 +56,4 @@ scp
 ifconfig
 ip
 ss
+brctl
