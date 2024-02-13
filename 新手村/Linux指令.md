@@ -41,6 +41,7 @@ htop
 df
 free
 du
+lsns
 
 ## 網路工具
 dig
