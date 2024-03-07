@@ -158,6 +158,14 @@ sudo systemctl enable prometheus
 systemctl status prometheus
 ```
 
+Open Prometheus server port and reload firewall
+
+```
+sudo firewall-cmd --permanent --add-rich-rule 'rule family="ipv4" source address="<your IP>" port protocol="tcp" port="9090" accept'
+
+sudo firewall-cmd --reload
+```
+
 Finished installing Prometheus, please check firewall of the server and connect to `http://localhost:9090` to see if Prometheus works well.
 
 ### node_exporter
@@ -220,6 +228,16 @@ sudo systemctl enable node_exporter
 systemctl status node_exporter
 ```
 
+
+Open node_exporter port and reload firewall
+
+
+```
+sudo firewall-cmd --permanent --add-rich-rule 'rule family="ipv4" source address="<your IP>" port protocol="tcp" port="9100" accept'
+
+sudo firewall-cmd --reload
+
+```
 For checking node_exporter, connect to `http://localhost:9100`, `http://localhost:9100/metrics` to see if there has metrics information.
 
 #### 4. Add node_exporter to the Prometheus Server
@@ -318,6 +336,14 @@ sudo yum install grafana -y
 systemctl enable --now grafana-server.service
 ```
 Command `systemctl enable --now grafana-server.service` will help to Create symlink from `/etc/systemd/system/multi-user.target.wants/grafana-server.service` to `/usr/lib/systemd/system/grafana-server.service`.
+
+Open Grafana server port and reload firewall
+
+```
+sudo firewall-cmd --permanent --add-rich-rule 'rule family="ipv4" source address="<your IP>" port protocol="tcp" port="3000" accept'
+
+sudo firewall-cmd --reload
+```
 
 Installing finished! Check `http://localhost:3000` to see Grafana login page.
 
