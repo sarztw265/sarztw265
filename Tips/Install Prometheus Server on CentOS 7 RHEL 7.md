@@ -6,6 +6,8 @@
 >https://www.howtoforge.com/tutorial/how-to-install-prometheus-and-node-exporter-on-centos-7/#step-install-and-configure-nodeexporter
 >https://centlinux.com/install-prometheus-on-centos-7/
 >https://centlinux.com/install-grafana-on-centos-7/
+>https://technixleo.com/install-grafana-with-prometheus-on-rhel-centos-stream/
+>https://grafana.com/grafana/dashboards/1860-node-exporter-full/
 
 >prometheus.io download link (Prometheus and node_exporter):
 >
@@ -349,3 +351,15 @@ Installing finished! Check `http://localhost:3000` to see Grafana login page.
 
 #### 3. Import Prometheus data source and build dashboard
 
+Login Grafana at `http://localhost:3000` , default account/password is `admin/admin`
+
+Add Prometheus data source.
+![2024-03-07_1656583.png](../_resources/2024-03-07_1656583.png)
+![2024-03-07_1659602.png](../_resources/2024-03-07_1659602.png)
+
+And there are some default dashboard can be imported.
+![2024-03-07_1708187.png](../_resources/2024-03-07_1708187.png)
+
+Import other dashboard
+![2024-03-07_1758454.png](../_resources/2024-03-07_1758454.png)
+![2024-03-07_1758454.png](../_resources/2024-03-07_1758454.png)
