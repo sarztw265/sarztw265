@@ -24,7 +24,6 @@ There are steps below.
     3. Configure node_exporter as a systemd service
     4. Add node_exporter to the Prometheus Server
 
-
 ## Steps
 
 ### Prometheus
@@ -152,7 +151,7 @@ sudo systemctl enable prometheus
 systemctl status prometheus
 ```
 
-Finish installing Prometheus, please check firewall of the server and connect to `http://localhost:9090` to see if Prometheus work well.
+Finished installing Prometheus, please check firewall of the server and connect to `http://localhost:9090` to see if Prometheus works well.
 
 ### node_exporter
 
