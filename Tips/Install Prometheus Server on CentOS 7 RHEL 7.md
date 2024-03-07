@@ -362,4 +362,5 @@ And there are some default dashboard can be imported.
 
 Import other dashboard
 ![2024-03-07_1758454.png](../_resources/2024-03-07_1758454.png)
-![2024-03-07_1758454.png](../_resources/2024-03-07_1758454.png)
+![2024-03-07_1800681.png](../_resources/2024-03-07_1800681.png)
+![2024-03-07_1815868.png](../_resources/2024-03-07_1815868.png)
