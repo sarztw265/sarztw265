@@ -102,3 +102,6 @@ SyslogIdentifier：指定服務的識別符號，用於標識系統日誌中的�
 e.g. `docker container inspect --format='{{json .State}}' 49a13d02c077 | jq`
 
 https://www.onejar99.com/jq_commands/
+
+## CentOS查看CPU數量
+`nproc --all`
