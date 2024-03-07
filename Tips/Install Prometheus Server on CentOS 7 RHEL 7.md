@@ -4,6 +4,8 @@
 >https://computingforgeeks.com/install-prometheus-server-on-centos-rhel/
 >https://www.howtoforge.com/tutorial/how-to-install-prometheus-and-node-exporter-on-centos-7/
 >https://www.howtoforge.com/tutorial/how-to-install-prometheus-and-node-exporter-on-centos-7/#step-install-and-configure-nodeexporter
+>https://centlinux.com/install-prometheus-on-centos-7/
+>https://centlinux.com/install-grafana-on-centos-7/
 
 >prometheus.io download link (Prometheus and node_exporter):
 >
@@ -23,6 +25,11 @@ There are steps below.
     2. Download node_exporter and install it
     3. Configure node_exporter as a systemd service
     4. Add node_exporter to the Prometheus Server
+
+- Install Grafana
+    1. Add Grafana official repository
+    2. Install Grafana with yum
+    3. Import Prometheus data source and build dashboard 
 
 ## Steps
 
@@ -274,3 +281,45 @@ Then restart Prometheus
 ```
 systemctl restart prometheus
 ```
+
+### Grafana
+
+#### 1. Add Grafana official repository
+
+```
+sudo vim /etc/yum.repos.d/grafana.repo
+```
+
+Edit this new file with below:
+
+```
+[grafana]
+name=grafana
+baseurl=https://packages.grafana.com/oss/rpm
+repo_gpgcheck=1
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.grafana.com/gpg.key
+sslverify=1
+sslcacert=/etc/pki/tls/certs/ca-bundle.crt
+```
+
+Build yum cache
+
+```
+sudo yum makecache fast
+```
+
+#### 2. Install Grafana with yum
+
+```
+sudo yum install grafana -y
+
+systemctl enable --now grafana-server.service
+```
+Command `systemctl enable --now grafana-server.service` will help to Create symlink from `/etc/systemd/system/multi-user.target.wants/grafana-server.service` to `/usr/lib/systemd/system/grafana-server.service`.
+
+Installing finished! Check `http://localhost:3000` to see Grafana login page.
+
+#### 3. Import Prometheus data source and build dashboard
+
