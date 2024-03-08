@@ -293,6 +293,7 @@ scrape_configs:
   - job_name: "node"
 
     static_configs:
+      # If need to add more, just add in targets array, like ["localhost:9100", "<other node IP here>:9100"]
       - targets: ["localhost:9100"]
 ```
 
