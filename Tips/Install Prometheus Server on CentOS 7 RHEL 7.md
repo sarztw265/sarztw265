@@ -1,13 +1,13 @@
 # Install Prometheus Server on CentOS 7 / RHEL 7 local machine
 >reference:
 >
->https://computingforgeeks.com/install-prometheus-server-on-centos-rhel/
->https://www.howtoforge.com/tutorial/how-to-install-prometheus-and-node-exporter-on-centos-7/
->https://www.howtoforge.com/tutorial/how-to-install-prometheus-and-node-exporter-on-centos-7/#step-install-and-configure-nodeexporter
->https://centlinux.com/install-prometheus-on-centos-7/
->https://centlinux.com/install-grafana-on-centos-7/
->https://technixleo.com/install-grafana-with-prometheus-on-rhel-centos-stream/
->https://grafana.com/grafana/dashboards/1860-node-exporter-full/
+>https://computingforgeeks.com/install-prometheus-server-on-centos-rhel/  
+>https://www.howtoforge.com/tutorial/how-to-install-prometheus-and-node-exporter-on-centos-7/  
+>https://www.howtoforge.com/tutorial/how-to-install-prometheus-and-node-exporter-on-centos-7/#step-install-and-configure-nodeexporter  
+>https://centlinux.com/install-prometheus-on-centos-7/  
+>https://centlinux.com/install-grafana-on-centos-7/  
+>https://technixleo.com/install-grafana-with-prometheus-on-rhel-centos-stream/  
+>https://grafana.com/grafana/dashboards/1860-node-exporter-full/  
 
 >prometheus.io download link (Prometheus and node_exporter):
 >
@@ -17,21 +17,21 @@ In this document, we will install Prometheus, node exporter, and Grafana in sequ
 There are steps below.
 
 ## What will we do
-- Install Prometheus
-    1. Create new group, user and directories for Prometheus
-    2. Download Prometheus
-    3. Configure Prometheus as a systemd service
+- [Install Prometheus](#prometheus)
+    1. [Create new group, user and directories for Prometheus](#1-create-new-group-user-and-directories-for-prometheus)
+    2. [Download and Install Prometheus](#2-download-and-install-prometheus)
+    3. [Create Prometheus systemd unit file](#3-create-prometheus-systemd-unit-file)
 
-- Install node_exporter
-    1. Create directories for node_exporter
-    2. Download node_exporter and install it
-    3. Configure node_exporter as a systemd service
-    4. Add node_exporter to the Prometheus Server
+- [Install node_exporter](#node_exporter)
+    1. [Create directories for node_exporter](#1-create-directories-for-node_exporter)
+    2. [Download node_exporter and install it](#2-download-node_exporter-and-install-it)
+    3. [Configure node_exporter as a systemd service](#3-configure-node_exporter-as-a-systemd-service)
+    4. [Add node_exporter to the Prometheus Server](#4-add-node_exporter-to-the-prometheus-server)
 
-- Install Grafana
-    1. Add Grafana official repository
-    2. Install Grafana with yum
-    3. Import Prometheus data source and build dashboard 
+- [Install Grafana](#grafana)
+    1. [Add Grafana official repository](#1-add-grafana-official-repository)
+    2. [Install Grafana with yum](#2-install-grafana-with-yum)
+    3. [Import Prometheus data source and build dashboard](#3-import-prometheus-data-source-and-build-dashboard)
 
 ## Steps
 
