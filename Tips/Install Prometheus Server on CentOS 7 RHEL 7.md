@@ -357,10 +357,10 @@ Add Prometheus data source.
 ![2024-03-07_1656583.png](../_resources/2024-03-07_1656583.png)
 ![2024-03-07_1659602.png](../_resources/2024-03-07_1659602.png)
 
-And there are some default dashboard can be imported.
+And there are some default dashboards can be imported.
 ![2024-03-07_1708187.png](../_resources/2024-03-07_1708187.png)
 
 Import other dashboard
 ![2024-03-07_1758454.png](../_resources/2024-03-07_1758454.png)
-![2024-03-07_1800681.png](../_resources/2024-03-07_1800681.png)
 ![2024-03-07_1815868.png](../_resources/2024-03-07_1815868.png)
+![2024-03-07_1800681.png](../_resources/2024-03-07_1800681.png)
