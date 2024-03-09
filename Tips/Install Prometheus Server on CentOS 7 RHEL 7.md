@@ -365,3 +365,8 @@ Import other dashboard
 ![2024-03-07_1758454.png](../_resources/2024-03-07_1758454.png)
 ![2024-03-07_1815868.png](../_resources/2024-03-07_1815868.png)
 ![2024-03-07_1800681.png](../_resources/2024-03-07_1800681.png)
+
+### Others
+
+Install Prometheus and node_exporter with docker-compose:  
+https://grafana.com/docs/grafana-cloud/send-data/metrics/metrics-prometheus/prometheus-config-examples/docker-compose-linux/  
