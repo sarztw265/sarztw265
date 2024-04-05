@@ -80,6 +80,12 @@ iostat (for disk)
 
 ## Install Pushgateway
 
+https://www.pluralsight.com/cloud-guru/labs/aws/installing-prometheus-pushgateway#:~:text=Install%20and%20Run%20Pushgateway%201%20Log%20in%20to,the%20service%20is%20running%20and%20serving%20metrics%3A%20
+
+sudo groupadd --system pushgateway
+
+sudo useradd -s /sbin/nologin --system -g pushgateway pushgateway
+
 mkdir -p /tmp/pushgateway && cd /tmp/pushgateway
 
 wget https://github.com/prometheus/pushgateway/releases/download/v1.7.0/pushgateway-1.7.0.linux-amd64.tar.gz
@@ -92,14 +98,39 @@ sudo mv pushgateway /etc/pushgateway
 
 rm -rf /tmp/pushgateway
 
-sudo chown -R prometheus:prometheus /etc/pushgateway
+sudo chown -R pushgateway:pushgateway /usr/local/bin/pushgateway
 
-sudo chmod 775 /etc/pushgateway
+sudo chmod 775 /usr/local/bin/pushgateway
 
-sudo ./pushgateway &
+sudo vim /etc/systemd/system/pushgateway.service
+
+```
+[Unit]
+Description=Prometheus Pushgateway
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=pushgateway
+Group=pushgateway
+ExecStart=/usr/local/bin/pushgateway
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+```
+
+sudo systemctl daemon-reload  
+sudo systemctl start pushgateway  
+sudo systemctl enable pushgateway  
+sudo systemctl status pushgateway  
 
 open firewall for 9091 port
 
 check localhost:9091
 
 touch process_info_catcher
+
