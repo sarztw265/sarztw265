@@ -94,7 +94,7 @@ tar xvzf pushgateway-*.tar.gz
 
 cd pushgateway*/
 
-sudo mv pushgateway /etc/pushgateway
+sudo mv pushgateway /usr/local/bin/pushgateway
 
 rm -rf /tmp/pushgateway
 
@@ -131,6 +131,4 @@ sudo systemctl status pushgateway
 open firewall for 9091 port
 
 check localhost:9091
-
-touch process_info_catcher
 
