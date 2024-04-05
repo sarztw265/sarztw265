@@ -141,6 +141,7 @@ ExecStart=/usr/local/bin/prometheus \
   --web.console.libraries=/etc/prometheus/console_libraries \
   --web.listen-address=0.0.0.0:9090 \
   --web.external-url=
+  --storage.tsdb.retention.time=30d
 
 SyslogIdentifier=prometheus
 Restart=always
