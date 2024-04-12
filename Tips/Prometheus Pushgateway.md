@@ -128,7 +128,9 @@ sudo systemctl start pushgateway
 sudo systemctl enable pushgateway  
 sudo systemctl status pushgateway  
 
-open firewall for 9091 port
+sudo firewall-cmd --permanent --add-rich-rule 'rule family="ipv4" source address="<your IP>" port protocol="tcp" port="9091" accept'
+
+sudo firewall-cmd --reload
 
 check localhost:9091
 
