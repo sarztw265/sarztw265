@@ -65,7 +65,7 @@ tar xvf prometheus*.tar.gz
 cd prometheus*/
 
 > # Move files
-sudo mv prometheus promtool /usr/local/bin/
+sudo mv prometheus promtool /usr/local/bin/prometheus/
 
 sudo mv prometheus.yml  /etc/prometheus/prometheus.yml
 
@@ -76,9 +76,9 @@ cd ~/
 rm -rf /tmp/prometheus
 
 > # Set permissions
-for i in rules rules.d files_sd; do sudo chown -R prometheus:prometheus /etc/prometheus/${i}; done
+sudo chown -R prometheus:prometheus /etc/prometheus/
 
-for i in rules rules.d files_sd; do sudo chmod -R 775 /etc/prometheus/${i}; done
+sudo chmod -R 775 /etc/prometheus/
 
 sudo chown -R prometheus:prometheus /var/lib/prometheus/
 
