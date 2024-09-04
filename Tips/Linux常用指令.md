@@ -2,9 +2,13 @@
 
 ## 壓縮
 `tar -zcvf 檔名.tar.gz 要備份的檔案`
+`tar -jcvf 檔名.tar.bz2 要備份的檔案`
+`tar -Jcvf 檔名.tar.xz 要備份的檔案`
 
 ## 解壓縮
 `tar -zxvf 檔名.tar.gz`
+`tar -jxvf 檔名.tar.bz2`
+`tar -Jxvf 檔名.tar.xz`
 
 ## 計算檔案大小並排序
 `du -sh --time .[^.]* * | sort -rh`
